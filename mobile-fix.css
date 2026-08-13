@@ -1,0 +1,36 @@
+/* スマホのタイプヒーロー：説明カードと横長イラストを上下に分け、狭い幅でも重ねない */
+@media(max-width:760px){
+  #result .pfhb-cine .cine,#profile .pfhb-cine .cine{
+    display:flex;
+    flex-direction:column;
+    background:var(--buzz-paper)!important;
+    overflow:hidden;
+  }
+  #result .pfhb-cine .cine__glass,#profile .pfhb-cine .cine__glass{
+    position:relative;
+    inset:auto;
+    order:1;
+    width:auto;
+    max-width:none;
+    margin:8px 14px 14px;
+    padding:18px 16px;
+    transform:none;
+    box-sizing:border-box;
+    z-index:2;
+  }
+  #result .pfhb-cine .cine__media,#profile .pfhb-cine .cine__media{
+    order:2;
+    width:100%;
+    --f:24px;
+  }
+  #result .pfhb-cine .cine__img,#profile .pfhb-cine .cine__img{
+    height:auto;
+    aspect-ratio:auto;
+    object-fit:contain;
+    object-position:center;
+  }
+  #result .pfhb-cine .cine__name,#profile .pfhb-cine .cine__name{
+    font-size:clamp(24px,7.7vw,31px);
+    overflow-wrap:anywhere;
+  }
+}
